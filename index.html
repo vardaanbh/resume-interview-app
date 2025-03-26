@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Enhancer & AI Interview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload or Paste Your Resume</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="resume_file" accept=".txt">
+            <textarea name="resume_text" placeholder="Or paste your resume here..."></textarea>
+            <button type="submit">Enhance Resume</button>
+        </form>
+    </div>
+</body>
+</html>

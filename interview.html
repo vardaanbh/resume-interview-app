@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Interview</h1>
+        <div id="interview-container">
+            {% for question, tts_file in zip(questions, tts_files) %}
+                <div class="question">
+                    <p>{{ question }}</p>
+                    <audio controls>
+                        <source src="{{ tts_file }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <textarea name="responses" placeholder="Your answer..."></textarea>
+                </div>
+            {% endfor %}
+            <button onclick="submitResponses()">Submit Answers</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

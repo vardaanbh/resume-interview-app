@@ -1,0 +1,7 @@
+Flask==2.3.2
+cohere==4.0.0
+Flask-SQLAlchemy==3.0.3
+Flask-Login==0.6.2
+gunicorn==20.1.0
+python-dotenv==1.0.0
+gtts==2.3.2
